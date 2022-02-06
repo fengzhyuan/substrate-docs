@@ -200,7 +200,7 @@ the heavy lifting, with the help of `KittyAvatar.js` and `KittCards.js`.
 
     // Use React hooks
     export default function Kitties (props) {
-      const { api, keyring } = useSubstrate();
+      const { state: {api, keyring} } = useSubstrate();
       const { accountPair } = props;
 
       const [kittyHashes, setKittyHashes] = useState([]);
